@@ -22,7 +22,12 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{
+    useHash:false
+    //cuando esta en true nos genera el # en la ruta para que pueda acceder
+    //desde el servidor a las apis, si no se configura aqui , se configura en node
+    
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

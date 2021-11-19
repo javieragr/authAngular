@@ -4,5 +4,28 @@
 
 <h4>User info</h4>
 
-<pre>{{usuario|json}}</pre>
-<button (click)="logout()" >Logout</button>
+<!-- <pre>{{usuario|json}}</pre> -->
+
+<form [formGroup]="formulario">
+    <div class="form-group">
+        <div class="row col-md-8" >
+            <div class="col-md-4">
+                <label class="lbl control-label">Email address</label>
+                <input type="email" formControlName="nombre" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              
+
+            </div>
+            <div class="col-md-4">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1">
+                
+            </div>
+            
+        </div>
+      </div>
+     
+    <button type="button" (click)="guardar()" class="btn btn-primary">
+        Guardar
+    </button>
+    <button (click)="logout()" class="btn btn-danger">Logout</button>
+</form>
